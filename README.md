@@ -9,6 +9,10 @@
       - [19.py](#19py)
       - [20.py](#20py)
       - [21.py](#21py)
+      - [22.py](#22py)
+    - [29-Jun-2026](#29-jun-2026)
+      - [zip()](#zip)
+      - [unzip()](#unzip)
 
 ### 24-Jun-2026
 #### 30.py
@@ -105,4 +109,64 @@ for i in dupes:
     if (i not in new):
         new.append(i)
 print(new)
+```
+
+#### 22.py
+- Problem: Given a list of numbers, use a for loop to create a new list that contains the squares of only the odd numbers from the original list.
+- ​Given: numbers = [1, 2, 3, 4, 5]
+- ​Expected Output List: [1, 9, 25] (since 1^2 = 1, 3^2 = 9, 5^2 = 25)
+```python
+numbers = [1, 2, 3, 4, 5]
+squares = []
+for n in numbers:
+    if n % 2 == 1: 
+        squares.append(n ** 2)
+print(squares)
+```
+
+### 29-Jun-2026
+#### zip()
+
+If u want to print 2 or multiple list, tuples, and dist too at the same time in the for loop so we uses zip 
+
+```python
+names = ['Alice', 'Bob', 'Charlie']
+ages = [25, 30, 35]
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old.")
+
+names = ['Alice', 'Bob', 'Charlie']
+ages = [25, 30, 35]
+grades = ['A', 'B', 'C']
+
+for name, age, grade in zip(names, ages, grades):
+    print(f"{name} is {age} years old and has a grade of {grade}.")
+
+''' output
+Alice is 25 years old.
+Bob is 30 years old.
+Charlie is 35 years old.
+Alice is 25 years old and has a grade of A.
+Bob is 30 years old and has a grade of B.
+Charlie is 35 years old and has a grade of C.                                    
+'''
+```
+
+#### unzip()
+its the reverse of zip if we have zipped file and we want to unzip so we used to use `zip(*<name>)`
+
+```python
+names = ['Alice', 'Bob', 'Charlie']
+scores = [85, 90, 95]
+
+zipped = zip(names, scores)
+unzipped_names, unzipped_scores = zip(*zipped)
+
+print("Unzipped Names:", unzipped_names)
+print("Unzipped Scores:", unzipped_scores)
+'''output
+Unzipped Names: ('Alice', 'Bob', 'Charlie')
+Unzipped Scores: (85, 90, 95)
+'''
 ```

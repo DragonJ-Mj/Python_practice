@@ -13,6 +13,7 @@
     - [29-Jun-2026](#29-jun-2026)
       - [zip()](#zip)
       - [unzip()](#unzip)
+      - [zip\_longest()](#zip_longest)
 
 ### 24-Jun-2026
 #### 30.py
@@ -168,5 +169,25 @@ print("Unzipped Scores:", unzipped_scores)
 '''output
 Unzipped Names: ('Alice', 'Bob', 'Charlie')
 Unzipped Scores: (85, 90, 95)
+'''
+```
+#### zip_longest()
+It is used to pair up elements with a default value 
+- for it we need to `import` a library named `itertools`
+```python
+from itertools import zip_longest
+
+## define two lists of different lengths
+names = ['Alice', 'Bob', 'Charlie']
+ages = [25, 30]
+
+## use zip_longest to combine the lists
+for name, age in zip_longest(names, ages, fillvalue='N/A'):
+    print(f"{name} is {age} years old.")
+
+'''output
+Alice is 25 years old.
+Bob is 30 years old.
+Charlie is N/A years old.
 '''
 ```

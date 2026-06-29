@@ -14,6 +14,7 @@
       - [zip()](#zip)
       - [unzip()](#unzip)
       - [zip\_longest()](#zip_longest)
+      - [star left pattern](#star-left-pattern)
 
 ### 24-Jun-2026
 #### 30.py
@@ -189,5 +190,30 @@ for name, age in zip_longest(names, ages, fillvalue='N/A'):
 Alice is 25 years old.
 Bob is 30 years old.
 Charlie is N/A years old.
+'''
+```
+
+#### star left pattern
+
+```python
+for i in range(6):
+    print("*"*i)
+
+for i in range(6,0,-1):
+    print("*"*i)
+'''output
+
+*
+**
+***
+****
+*****
+******
+*****
+****
+***
+**
+*
+
 '''
 ```

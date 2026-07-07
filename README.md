@@ -15,6 +15,9 @@
       - [unzip()](#unzip)
       - [zip\_longest()](#zip_longest)
       - [star left pattern](#star-left-pattern)
+    - [07-Jul-2026](#07-jul-2026)
+      - [Lambda Function](#lambda-function)
+      - [Map Function](#map-function)
 
 ### 24-Jun-2026
 #### 30.py
@@ -216,4 +219,18 @@ for i in range(6,0,-1):
 *
 
 '''
+```
+
+### 07-Jul-2026
+
+#### Lambda Function
+
+
+#### Map Function
+
+map(function, iteration)
+```py
+number = [1,2,3,4,5]
+sq= list(map(lambda x : x**2, number))
+print(sq)
 ```

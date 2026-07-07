@@ -18,6 +18,7 @@
     - [07-Jul-2026](#07-jul-2026)
       - [Lambda Function](#lambda-function)
       - [Map Function](#map-function)
+      - [Filter Function](#filter-function)
 
 ### 24-Jun-2026
 #### 30.py
@@ -245,3 +246,14 @@ print(even_num)
 [False, True, False, True, False, True, False, True, False]
 '''
 ```
+
+#### Filter Function
+
+```py
+filter(function, iteration)
+even_num = list(filter(lambda x: x%2==0, [1,2,3,4,5,6,7,8,9]))
+print(even_num)
+'''output
+[2, 4, 6, 8]
+'''
+``
